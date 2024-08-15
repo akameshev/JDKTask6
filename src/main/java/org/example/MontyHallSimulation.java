@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-@Data
+
 public class MontyHallSimulation {
     private final Random random = new Random();
     private final int totalGames = 1000;
