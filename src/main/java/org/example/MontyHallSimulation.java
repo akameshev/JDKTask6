@@ -32,19 +32,19 @@ public class MontyHallSimulation {
     }
 
     private boolean playGame() {
-        int winningDoor = random.nextInt(3); // Random door with the prize
-        int chosenDoor = random.nextInt(3); // Contestant's initial choice
+        int winningDoor = random.nextInt(3); 
+        int chosenDoor = random.nextInt(3);
 
-        // Simulate host opening a door that isn't the prize or the contestant's choice
+
         int revealedDoor;
         do {
             revealedDoor = random.nextInt(3);
         } while (revealedDoor == winningDoor || revealedDoor == chosenDoor);
 
-        // Contestant switches to the remaining door
+
         int switchedDoor = 3 - chosenDoor - revealedDoor;
 
-        // Return true if switching wins
+
         return switchedDoor == winningDoor;
     }
 
